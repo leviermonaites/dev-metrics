@@ -1,0 +1,7 @@
+name: Commit Workflow
+on: [push]
+jobs:
+  compilation_check:
+    runs-on: node:22-alpine3.19
+    steps:
+      - run: yarn build:check
