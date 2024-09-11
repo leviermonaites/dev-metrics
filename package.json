@@ -3,6 +3,8 @@
   "packageManager": "yarn@4.4.1",
   "type": "commonjs",
   "scripts": {
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
     "migrate": "yarn typeorm-ts-node-commonjs migration:run -d ./src/drivers/typeorm/migration.ts",
     "migration:revert": "yarn typeorm-ts-node-commonjs migration:revert -d ./src/drivers/typeorm/migration.ts",
     "migration:create": "yarn typeorm-ts-node-commonjs migration:create"

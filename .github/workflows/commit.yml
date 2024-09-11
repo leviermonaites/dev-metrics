@@ -1,0 +1,13 @@
+name: Commit Workflow
+on: [push]
+jobs:
+  compilation_check:
+    runs-on: ubuntu-latest
+    container: node:22-alpine3.19
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: yarn
+      - name: Compilation check
+        run: yarn build:check
