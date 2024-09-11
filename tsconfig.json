@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["dom","ESNext","ES6","es2021", "ESNext.AsyncIterable", "ES2019.Array"],
+    "outDir": "dist",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+  },
+  "include": ["src/**/*", "shared", "Lifecycle"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
+    "require": ["tsconfig-paths/register"],
+  },
+}
