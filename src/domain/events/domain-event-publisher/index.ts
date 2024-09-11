@@ -11,6 +11,7 @@ export default class DomainEventPublisher {
   addEvent<Event extends GenericBaseEvent>(event: Event): void {
     this.eventQueue.push(event)
   }
+
   clearEvents(): void {
     this.eventQueue = []
   }
